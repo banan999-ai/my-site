@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Движение Первых — Инструкции и FAQ</title>
+  <title>Движение Первых — База знаний</title>
   <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
 
   <header class="header">
-    <a href="../index.html" class="logo"><strong>Педагогический навигатор</strong></a>
+    <a href="../index.html" class="logo">Педагогический навигатор</a>
     <nav class="nav-links">
       <a href="../orlyata/index.html">Орлята России</a>
       <a href="../pervye/index.html" class="active">Движение Первых</a>
@@ -17,87 +17,67 @@
   </header>
 
   <main class="container">
-    <a href="../index.html" class="back-link">← На главную</a>
+    <a href="../index.html" class="btn-link">← На главную</a>
     <h1 class="main-title">⭐ Движение Первых</h1>
-    <p class="subtitle">Инструкции по первичному отделению, проектам и подаче заявок на платформе будьвдвижении.рф.</p>
+    <p class="subtitle">Инструкции по созданию первичных отделений и проектам.</p>
 
     <!-- Поиск -->
     <div class="search-box">
-      <input type="text" id="search-input" placeholder="🔍 Введите ключевое слово (например: первичное отделение, заявка, проект)...">
+      <input type="text" id="search-input" placeholder="🔍 Введите ключевое слово (первичное отделение, ID, заявка)...">
     </div>
 
-    <!-- Инструкции -->
-    <section class="section-block">
-      <h2>📖 Пошаговые инструкции</h2>
+    <h2 style="margin-bottom: 1rem;">📖 Пошаговые инструкции</h2>
 
-      <details class="accordion-item">
-        <summary><span class="acc-title">Как открыть Первичное отделение «Движения Первых» в школе</span></summary>
-        <div class="acc-body">
-          <ol>
-            <li>Сформируйте инициативную группу (не менее 3 человек: учащиеся и педагог-наставник).</li>
-            <li>Проведите заседание инициативной группы и составьте Протокол.</li>
-            <li>Подайте электронное заявление через личный кабинет на сайте <code>будьвдвижении.рф</code>.</li>
-            <li>Дождитесь утверждения заявки региональным отделением и получи штандарт Первичного отделения.</li>
-          </ol>
-        </div>
-      </details>
-
-      <details class="accordion-item">
-        <summary><span class="acc-title">Как подать коллективную заявку на всероссийский проект</span></summary>
-        <div class="acc-body">
-          <ol>
-            <li>Наставник авторизуется на портале и переходит в карточку нужного проекта.</li>
-            <li>Выбирает тип участия: «Команда» или «Коллективная заявка».</li>
-            <li>Указывает ID всех участников команды (обучающиеся должны быть зарегистрированы на портале).</li>
-            <li>Загружает конкурсное задание и отправляет на модерацию.</li>
-          </ol>
-        </div>
-      </details>
-    </section>
-
-    <!-- FAQ -->
-    <section class="section-block">
-      <h2>❓ Частые вопросы (FAQ)</h2>
-
-      <details class="accordion-item">
-        <summary><span class="acc-title">С какого возраста дети могут вступать в Движение Первых?</span></summary>
-        <div class="acc-body">
-          <p>Вступить в Движение могут обучающиеся с 6 лет. До 14 лет согласие подписывают родители, с 14 лет подросток регистрируется самостоятельно через Госуслуги.</p>
-        </div>
-      </details>
-
-      <details class="accordion-item">
-        <summary><span class="acc-title">Зачем нужен ID участника и где его найти?</span></summary>
-        <div class="acc-body">
-          <p>ID — это уникальный номер участника в системе. Найти его можно в личном кабинете на сайте <code>будьвдвижении.рф</code> в профиле под именем и фамилией.</p>
-        </div>
-      </details>
-    </section>
-
-    <!-- Кнопка заявки -->
-    <div class="feedback-section">
-      <button id="open-modal-btn-main" class="btn-primary">
-        <span>📝</span> Не нашли ответ? Подать заявку / Задать вопрос
+    <div class="accordion-item">
+      <button class="accordion-header">
+        <span>Как открыть Первичное отделение?</span>
+        <span class="accordion-icon">＋</span>
       </button>
+      <div class="accordion-content">
+        <div class="accordion-body">
+          <ol>
+            <li>Соберите инициативную группу (3+ человек).</li>
+            <li>Оформите протокол заседания.</li>
+            <li>Подайте электронное заявление на <code>будьвдвижении.рф</code>.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <h2 style="margin: 2rem 0 1rem;">❓ Частые вопросы (FAQ)</h2>
+
+    <div class="accordion-item">
+      <button class="accordion-header">
+        <span>Где найти ID участника?</span>
+        <span class="accordion-icon">＋</span>
+      </button>
+      <div class="accordion-content">
+        <div class="accordion-body">
+          <p>Уникальный ID находится в личном кабинете участника сразу под именем и фамилией.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 3rem;">
+      <button class="btn-primary js-open-modal">📝 Оформить заявку / Задать вопрос</button>
     </div>
   </main>
 
-  <!-- Модальное окно -->
   <div id="request-modal" class="modal">
     <div class="modal-content">
-      <h2>Отправить заявку по «Движению Первых»</h2>
+      <h2 style="margin-top:0;">Заявка (Движение Первых)</h2>
       <form id="request-form">
         <div class="form-group">
-          <label for="user-name">Ваше ФИО:</label>
-          <input type="text" id="user-name" required placeholder="Петров Игорь Васильевич">
+          <label>ФИО</label>
+          <input type="text" required placeholder="ФИО полностью">
         </div>
         <div class="form-group">
-          <label for="user-school">Школа / Первичное отделение:</label>
-          <input type="text" id="user-school" required placeholder="Лицей №2">
+          <label>Первичное отделение / Школа</label>
+          <input type="text" required placeholder="Наименование">
         </div>
         <div class="form-group">
-          <label for="user-message">Ваш вопрос или тема заявки:</label>
-          <textarea id="user-message" rows="4" required placeholder="Опишите вопрос..."></textarea>
+          <label>Вопрос</label>
+          <textarea rows="4" required placeholder="Опишите вопрос..."></textarea>
         </div>
         <div class="modal-actions">
           <button type="submit" class="btn-primary">Отправить</button>
