@@ -1,19 +1,83 @@
-<!doctype html>
-<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Педагогический навигатор — понятные инструкции для педагогов.">
-<title>Педагогический навигатор</title><link rel="stylesheet" href="assets/style.css"></head>
-<body><header class="topbar"><div class="container nav">
-<a class="brand" href="./"><span class="brandmark">✦</span><span>Педагогический навигатор</span></a>
-<nav class="navlinks"><a href="orlyata/">Орлята России</a><a href="pervye/">Движение Первых</a><a href="https://docs.google.com/forms/d/e/1FAIpQLScjpH6-99fADP17gzk8YCZTK8gjjQ48LbidWgB1qYzVU0Q72A/viewform?usp=publish-editor" target="_blank">Задать вопрос</a></nav>
-<button class="menu" aria-label="Меню">☰</button></div></header>
-<main class="home-hero"><div class="container">
-<span class="eyebrow">Для педагогов</span><h1>Понятные инструкции.<br>Без лишних поисков.</h1>
-<p>Выберите организацию — внутри вас ждёт отдельный мини-портал с собственной навигацией, оформлением и полезными подсказками.</p>
-<div class="portal-grid">
-<a class="portal orl" href="orlyata/"><div><span>🦅</span><h2>Орлята России</h2><p>Инструкции и ответы для педагогов программы.</p></div><div class="arrow">Открыть раздел →</div></a>
-<a class="portal per" href="pervye/"><div><span>⭐</span><h2>Движение Первых</h2><p>Инструкции и ответы для педагогов и взрослых участников.</p></div><div class="arrow">Открыть раздел →</div></a>
-</div>
-<div class="actions"><a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLScjpH6-99fADP17gzk8YCZTK8gjjQ48LbidWgB1qYzVU0Q72A/viewform?usp=publish-editor" target="_blank">📝 Задать свой вопрос</a></div>
-</div></main>
-<footer class="footer"><div class="container footerrow"><span>Педагогический навигатор · информационный справочник</span><span>© 2026</span></div></footer>
-</body></html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Педагогический навигатор</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo"><strong>Педагогический навигатор</strong></div>
+    <nav class="nav-links">
+      <a href="orlyata/index.html">Орлята России</a>
+      <a href="pervye/index.html">Движение Первых</a>
+      <button id="open-modal-btn-head" class="nav-btn-action">Задать вопрос</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <span class="badge">Для педагогов</span>
+    
+    <h1 class="main-title">Понятные инструкции.<br>Без лишних поисков.</h1>
+    <p class="subtitle">Выберите организацию — внутри вас ждёт отдельный справочник с поиском, пошаговыми инструкциями и ответами на частые вопросы.</p>
+
+    <div class="grid-cards">
+      <!-- Карточка 1: Орлята -->
+      <div class="card">
+        <div class="card-icon">🦅</div>
+        <h2 class="card-title">Орлята России</h2>
+        <p class="card-desc">Инструкции по трекам, заполнению отчётов и работе с личным кабинетом.</p>
+        <a href="orlyata/index.html" class="btn-link">Открыть раздел →</a>
+      </div>
+
+      <!-- Карточка 2: Первые -->
+      <div class="card">
+        <div class="card-icon">⭐</div>
+        <h2 class="card-title">Движение Первых</h2>
+        <p class="card-desc">Инструкции по подаче заявок, флагманским проектам и первичным отделениям.</p>
+        <a href="pervye/index.html" class="btn-link">Открыть раздел →</a>
+      </div>
+    </div>
+
+    <!-- Кнопка заявки -->
+    <div class="feedback-section">
+      <button id="open-modal-btn-main" class="btn-primary">
+        <span>📝</span> Задать свой вопрос / Подать заявку
+      </button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>Педагогический навигатор · информационный справочник © 2026</p>
+  </footer>
+
+  <!-- Модальное окно подачи заявки -->
+  <div id="request-modal" class="modal">
+    <div class="modal-content">
+      <h2>Отправить заявку или вопрос</h2>
+      <form id="request-form">
+        <div class="form-group">
+          <label for="user-name">Ваше ФИО:</label>
+          <input type="text" id="user-name" required placeholder="Иванова Анна Сергеевна">
+        </div>
+        <div class="form-group">
+          <label for="user-school">Образовательная организация / Регион:</label>
+          <input type="text" id="user-school" required placeholder="МБОУ СОШ №10">
+        </div>
+        <div class="form-group">
+          <label for="user-message">Ваш вопрос или описание проблемы:</label>
+          <textarea id="user-message" rows="4" required placeholder="Опишите ваш вопрос..."></textarea>
+        </div>
+        <div class="modal-actions">
+          <button type="submit" class="btn-primary">Отправить</button>
+          <button type="button" class="btn-secondary" id="close-modal-btn">Отмена</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
