@@ -1,17 +1,121 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Навигатор для педагогов по Орлятам России."><title>Орлята России — Педагогический навигатор</title>
-<link rel="stylesheet" href="../assets/style.css"><style>:root{--accent:#e68a28;--soft:#fff2cf;--glow1:#ffd45c;--glow2:#72cbe3}</style></head>
-<body><header class="topbar"><div class="container nav"><a class="brand" href="../"><span class="brandmark" style="background:linear-gradient(135deg,#f7c844,#e77c2b)">🦅</span><span>Орлята России</span></a>
-<nav class="navlinks"><a href="../">Главная</a><a href="#instructions">Инструкции</a><a href="#faq">FAQ</a><a href="https://docs.google.com/forms/d/e/1FAIpQLScjpH6-99fADP17gzk8YCZTK8gjjQ48LbidWgB1qYzVU0Q72A/viewform?usp=publish-editor" target="_blank">Задать вопрос</a></nav><button class="menu" aria-label="Меню">☰</button></div></header>
-<main><section class="hero"><div class="container"><span class="eyebrow">Навигатор педагога</span><h1>Орлята России</h1><p>Отдельный справочный раздел: основные действия, подсказки и ответы на вопросы собраны в одном месте.</p>
-<div class="actions"><a class="btn btn-primary" href="#instructions">Смотреть инструкции</a><a class="btn btn-secondary" href="https://docs.google.com/forms/d/e/1FAIpQLScjpH6-99fADP17gzk8YCZTK8gjjQ48LbidWgB1qYzVU0Q72A/viewform?usp=publish-editor" target="_blank">📝 Задать вопрос</a></div></div></section>
-<section class="section" id="instructions"><div class="container"><div class="section-head"><div><h2>С чего начать</h2><p>Выберите нужную тему.</p></div></div><input class="searchbox" data-search placeholder="Поиск по инструкциям…">
-<div class="grid">
-<article class="card" data-card><div class="num">01</div><h3>Регистрация</h3><p>Пошаговая навигация по началу работы педагога.</p></article><article class="card" data-card><div class="num">02</div><h3>Карточка класса</h3><p>Что подготовить и какие сведения понадобятся.</p></article><article class="card" data-card><div class="num">03</div><h3>Материалы программы</h3><p>Где искать занятия, методические и дополнительные материалы.</p></article><article class="card" data-card><div class="num">04</div><h3>Работа с разделами</h3><p>Как ориентироваться в личном кабинете и основных возможностях.</p></article><article class="card" data-card><div class="num">05</div><h3>Типичные проблемы</h3><p>Что проверить, если нужная функция не находится или не работает.</p></article><article class="card" data-card><div class="num">06</div><h3>Полезные ссылки</h3><p>Официальные ресурсы и страницы, которые стоит сохранить.</p></article></div></div></section>
-<section class="section" id="faq"><div class="container"><div class="section-head"><div><h2>Частые вопросы</h2><p>Коротко и по делу.</p></div></div><div class="faq">
-<details><summary>Не понимаю, с чего начать.</summary><p>Начните с инструкции «Регистрация», затем переходите к разделу о классе и материалам.</p></details>
-<details><summary>Не нашёл нужную функцию.</summary><p>Проверьте поиск по инструкциям. Если ответа нет, отправьте вопрос через форму.</p></details>
-<details><summary>Можно задать свой вопрос?</summary><p>Да. Нажмите «Задать вопрос», укажите ФИО, раздел и подробно опишите проблему.</p></details>
-</div></div></section></main>
-<footer class="footer"><div class="container footerrow"><span>Педагогический навигатор · Орлята России</span><a href="https://docs.google.com/forms/d/e/1FAIpQLScjpH6-99fADP17gzk8YCZTK8gjjQ48LbidWgB1qYzVU0Q72A/viewform?usp=publish-editor" target="_blank">Подать заявку</a></div></footer>
-<script src="../assets/app.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Орлята России — Инструкции и FAQ</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <a href="../index.html" class="logo"><strong>Педагогический навигатор</strong></a>
+    <nav class="nav-links">
+      <a href="../orlyata/index.html" class="active">Орлята России</a>
+      <a href="../pervye/index.html">Движение Первых</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← На главную</a>
+    <h1 class="main-title">🦅 Орлята России</h1>
+    <p class="subtitle">База пошаговых инструкций и ответов на вопросы для классных руководителей и педагогов.</p>
+
+    <!-- Поиск -->
+    <div class="search-box">
+      <input type="text" id="search-input" placeholder="🔍 Введите ключевое слово (например: регистрация, отчёт, треки)...">
+    </div>
+
+    <!-- Раздел с инструкциями -->
+    <section class="section-block">
+      <h2>📖 Пошаговые инструкции</h2>
+      
+      <details class="accordion-item">
+        <summary><span class="acc-title">Как зарегистрировать класс на портале «Орлята России»</span></summary>
+        <div class="acc-body">
+          <ol>
+            <li>Перейдите на официальный сайт <code>орлятароссии.рф</code> и войдите в личный кабинет педагога.</li>
+            <li>Откройте раздел «Мои классы» и нажмите кнопку «Добавить класс».</li>
+            <li>Укажите параллель, букву и количество обучающихся.</li>
+            <li>Загрузите сканы согласий родителей (законных представителей) на обработку персональных данных.</li>
+            <li>Сохраните изменения — класс отправится на подтверждение.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-title">Как проходить треки и сдавать отчетные материалы</span></summary>
+        <div class="acc-body">
+          <p>Программа включает 7 треков («Орлёнок – Лидер», «Орлёнок – Эрудит» и др.):</p>
+          <ul>
+            <li>Скачайте методический комплект к текущему треку из личного кабинета.</li>
+            <li>Проведите комплект из 8 вводных и практических занятий.</li>
+            <li>Сделайте 3–5 качественных фотографий с занятий.</li>
+            <li>Заполните итоговую форму отчёта до 25 числа текущего месяца.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-title">Как получить сертификаты и дипломы для участников</span></summary>
+        <div class="acc-body">
+          <p>Сертификаты становятся доступны в личном кабинете педагога автоматически после успешной проверки и утверждения отчёта по треку региональным координатором.</p>
+        </div>
+      </details>
+    </section>
+
+    <!-- Раздел FAQ -->
+    <section class="section-block">
+      <h2>❓ Частые вопросы (FAQ)</h2>
+
+      <details class="accordion-item">
+        <summary><span class="acc-title">Что делать, если родитель отказывается давать согласие?</span></summary>
+        <div class="acc-body">
+          <p>Ученик может принимать участие во всех внутренних классных мероприятиях. Однако его данные не заносятся на платформу, и электронный сертификат сформировать на него будет нельзя.</p>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-title">Где взять атрибутику (галстуки, значки, сумки)?</span></summary>
+        <div class="acc-body">
+          <p>Выдача атрибутики осуществляется через региональные ресурсные центры Навигаторов Детства или закупается централизованно образовательной организацией по утверждённому брендбуку.</p>
+        </div>
+      </details>
+    </section>
+
+    <!-- Кнопка заявки -->
+    <div class="feedback-section">
+      <button id="open-modal-btn-main" class="btn-primary">
+        <span>📝</span> Не нашли ответ? Подать заявку / Задать вопрос
+      </button>
+    </div>
+  </main>
+
+  <!-- Модальное окно -->
+  <div id="request-modal" class="modal">
+    <div class="modal-content">
+      <h2>Отправить заявку по «Орлятам России»</h2>
+      <form id="request-form">
+        <div class="form-group">
+          <label for="user-name">Ваше ФИО:</label>
+          <input type="text" id="user-name" required placeholder="Иванова Анна Сергеевна">
+        </div>
+        <div class="form-group">
+          <label for="user-school">Школа / Населённый пункт:</label>
+          <input type="text" id="user-school" required placeholder="Школа №15">
+        </div>
+        <div class="form-group">
+          <label for="user-message">Ваш вопрос:</label>
+          <textarea id="user-message" rows="4" required placeholder="Опишите проблему..."></textarea>
+        </div>
+        <div class="modal-actions">
+          <button type="submit" class="btn-primary">Отправить</button>
+          <button type="button" class="btn-secondary" id="close-modal-btn">Отмена</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="../assets/app.js"></script>
+</body>
+</html>
