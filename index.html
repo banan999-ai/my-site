@@ -13,59 +13,72 @@
     <nav class="nav-links">
       <a href="orlyata/index.html">Орлята России</a>
       <a href="pervye/index.html">Движение Первых</a>
-      <button class="btn-primary js-open-modal" style="padding: 8px 16px;">Задать вопрос</button>
+      <a href="#request-modal" class="nav-btn js-open-modal">Задать вопрос</a>
     </nav>
   </header>
 
   <main class="container">
-    <span class="badge">Для педагогов</span>
+    <div class="badge-wrapper">
+      <span class="badge">Для педагогов</span>
+    </div>
+    
     <h1 class="main-title">Понятные инструкции.<br>Без лишних поисков.</h1>
-    <p class="subtitle">Выберите нужный раздел — внутри вас ждёт база знаний с пошаговыми инструкциями, FAQ и поиском.</p>
+    <p class="subtitle">Выберите организацию — внутри вас ждёт отдельный мини-портал с собственной навигацией, оформлением и полезными подсказками.</p>
 
     <div class="grid-cards">
+      <!-- Орлята -->
       <div class="card">
-        <div style="font-size: 2.5rem;">🦅</div>
+        <div class="card-icon">🦅</div>
         <h2 class="card-title">Орлята России</h2>
-        <p style="color: var(--text-muted)">Инструкции по трекам, заполнению отчётов и работе с личным кабинетом.</p>
+        <p class="card-desc">Инструкции и ответы для педагогов программы.</p>
         <a href="orlyata/index.html" class="btn-link">Открыть раздел →</a>
       </div>
 
+      <!-- Первые -->
       <div class="card">
-        <div style="font-size: 2.5rem;">⭐</div>
+        <div class="card-icon">⭐</div>
         <h2 class="card-title">Движение Первых</h2>
-        <p style="color: var(--text-muted)">Инструкции по первичному отделению, проектам и подаче заявок.</p>
+        <p class="card-desc">Инструкции и ответы для педагогов и взрослых участников.</p>
         <a href="pervye/index.html" class="btn-link">Открыть раздел →</a>
       </div>
     </div>
 
-    <div style="text-align: center; margin-top: 3rem;">
-      <button class="btn-primary js-open-modal">📝 Оформить заявку / Задать вопрос</button>
+    <!-- Исправленный контрастный блок подачи заявок -->
+    <div class="feedback-section">
+      <button class="btn-question js-open-modal">
+        <span>📝</span> Задать свой вопрос / Подать заявку
+      </button>
     </div>
   </main>
 
+  <!-- Модальное окно подачи заявки -->
   <div id="request-modal" class="modal">
     <div class="modal-content">
-      <h2 style="margin-top:0;">Заявка / Вопрос</h2>
+      <h2>Задать вопрос или подать заявку</h2>
       <form id="request-form">
         <div class="form-group">
-          <label>Ваше ФИО</label>
-          <input type="text" required placeholder="Иванов Иван Иванович">
+          <label>ФИО:</label>
+          <input type="text" required placeholder="Введите ваше ФИО">
         </div>
         <div class="form-group">
-          <label>Организация / Школа</label>
-          <input type="text" required placeholder="Школа №1">
+          <label>Организация / Школа:</label>
+          <input type="text" required placeholder="Укажите номер или название">
         </div>
         <div class="form-group">
-          <label>Суть обращения</label>
-          <textarea rows="4" required placeholder="Опишите вопрос..."></textarea>
+          <label>Сообщение:</label>
+          <textarea rows="4" required placeholder="Опишите проблему или вопрос..."></textarea>
         </div>
         <div class="modal-actions">
-          <button type="submit" class="btn-primary">Отправить</button>
-          <button type="button" class="btn-secondary" id="close-modal-btn">Отмена</button>
+          <button type="submit" class="btn-submit">Отправить</button>
+          <button type="button" class="btn-close js-close-modal">Отмена</button>
         </div>
       </form>
     </div>
   </div>
+
+  <footer class="footer">
+    <p>Педагогический навигатор · информационный справочник © 2026</p>
+  </footer>
 
   <script src="assets/app.js"></script>
 </body>
