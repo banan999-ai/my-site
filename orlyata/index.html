@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Орлята России — Инструкции и FAQ</title>
+  <title>Орлята России — База знаний</title>
   <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
 
   <header class="header">
-    <a href="../index.html" class="logo"><strong>Педагогический навигатор</strong></a>
+    <a href="../index.html" class="logo">Педагогический навигатор</a>
     <nav class="nav-links">
       <a href="../orlyata/index.html" class="active">Орлята России</a>
       <a href="../pervye/index.html">Движение Первых</a>
@@ -17,96 +17,79 @@
   </header>
 
   <main class="container">
-    <a href="../index.html" class="back-link">← На главную</a>
+    <a href="../index.html" class="btn-link">← На главную</a>
     <h1 class="main-title">🦅 Орлята России</h1>
-    <p class="subtitle">База пошаговых инструкций и ответов на вопросы для классных руководителей и педагогов.</p>
+    <p class="subtitle">База инструкций и ответов на вопросы для педагогов.</p>
 
     <!-- Поиск -->
     <div class="search-box">
-      <input type="text" id="search-input" placeholder="🔍 Введите ключевое слово (например: регистрация, отчёт, треки)...">
+      <input type="text" id="search-input" placeholder="🔍 Введите ключевое слово (например: регистрация, треки, отчёт)...">
     </div>
 
-    <!-- Раздел с инструкциями -->
-    <section class="section-block">
-      <h2>📖 Пошаговые инструкции</h2>
-      
-      <details class="accordion-item">
-        <summary><span class="acc-title">Как зарегистрировать класс на портале «Орлята России»</span></summary>
-        <div class="acc-body">
+    <h2 style="margin-bottom: 1rem;">📖 Пошаговые инструкции</h2>
+
+    <div class="accordion-item">
+      <button class="accordion-header">
+        <span>Как зарегистрировать класс на портале?</span>
+        <span class="accordion-icon">＋</span>
+      </button>
+      <div class="accordion-content">
+        <div class="accordion-body">
           <ol>
-            <li>Перейдите на официальный сайт <code>орлятароссии.рф</code> и войдите в личный кабинет педагога.</li>
-            <li>Откройте раздел «Мои классы» и нажмите кнопку «Добавить класс».</li>
-            <li>Укажите параллель, букву и количество обучающихся.</li>
-            <li>Загрузите сканы согласий родителей (законных представителей) на обработку персональных данных.</li>
-            <li>Сохраните изменения — класс отправится на подтверждение.</li>
+            <li>Зайдите на сайт <code>орлятароссии.рф</code> и войдите в ЛК педагога.</li>
+            <li>Откройте «Мои классы» → «Добавить класс».</li>
+            <li>Укажите параллель и букву, прикрепите согласия родителей.</li>
           </ol>
         </div>
-      </details>
+      </div>
+    </div>
 
-      <details class="accordion-item">
-        <summary><span class="acc-title">Как проходить треки и сдавать отчетные материалы</span></summary>
-        <div class="acc-body">
-          <p>Программа включает 7 треков («Орлёнок – Лидер», «Орлёнок – Эрудит» и др.):</p>
-          <ul>
-            <li>Скачайте методический комплект к текущему треку из личного кабинета.</li>
-            <li>Проведите комплект из 8 вводных и практических занятий.</li>
-            <li>Сделайте 3–5 качественных фотографий с занятий.</li>
-            <li>Заполните итоговую форму отчёта до 25 числа текущего месяца.</li>
-          </ul>
-        </div>
-      </details>
-
-      <details class="accordion-item">
-        <summary><span class="acc-title">Как получить сертификаты и дипломы для участников</span></summary>
-        <div class="acc-body">
-          <p>Сертификаты становятся доступны в личном кабинете педагога автоматически после успешной проверки и утверждения отчёта по треку региональным координатором.</p>
-        </div>
-      </details>
-    </section>
-
-    <!-- Раздел FAQ -->
-    <section class="section-block">
-      <h2>❓ Частые вопросы (FAQ)</h2>
-
-      <details class="accordion-item">
-        <summary><span class="acc-title">Что делать, если родитель отказывается давать согласие?</span></summary>
-        <div class="acc-body">
-          <p>Ученик может принимать участие во всех внутренних классных мероприятиях. Однако его данные не заносятся на платформу, и электронный сертификат сформировать на него будет нельзя.</p>
-        </div>
-      </details>
-
-      <details class="accordion-item">
-        <summary><span class="acc-title">Где взять атрибутику (галстуки, значки, сумки)?</span></summary>
-        <div class="acc-body">
-          <p>Выдача атрибутики осуществляется через региональные ресурсные центры Навигаторов Детства или закупается централизованно образовательной организацией по утверждённому брендбуку.</p>
-        </div>
-      </details>
-    </section>
-
-    <!-- Кнопка заявки -->
-    <div class="feedback-section">
-      <button id="open-modal-btn-main" class="btn-primary">
-        <span>📝</span> Не нашли ответ? Подать заявку / Задать вопрос
+    <div class="accordion-item">
+      <button class="accordion-header">
+        <span>Как проходить треки и сдавать отчёты?</span>
+        <span class="accordion-icon">＋</span>
       </button>
+      <div class="accordion-content">
+        <div class="accordion-body">
+          <p>Проведите 8 занятий по методичке трека, сделайте 3-5 фотографий и загрузите отчёт в ЛК до 25 числа месяца.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2 style="margin: 2rem 0 1rem;">❓ Частые вопросы (FAQ)</h2>
+
+    <div class="accordion-item">
+      <button class="accordion-header">
+        <span>Что делать, если родитель отказался от обработки данных?</span>
+        <span class="accordion-icon">＋</span>
+      </button>
+      <div class="accordion-content">
+        <div class="accordion-body">
+          <p>Ребенок участвует во всех школьных занятиях, но его профиль не заносится в электронную систему портала.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 3rem;">
+      <button class="btn-primary js-open-modal">📝 Оформить заявку / Задать вопрос</button>
     </div>
   </main>
 
-  <!-- Модальное окно -->
   <div id="request-modal" class="modal">
     <div class="modal-content">
-      <h2>Отправить заявку по «Орлятам России»</h2>
+      <h2 style="margin-top:0;">Заявка (Орлята России)</h2>
       <form id="request-form">
         <div class="form-group">
-          <label for="user-name">Ваше ФИО:</label>
-          <input type="text" id="user-name" required placeholder="Иванова Анна Сергеевна">
+          <label>ФИО</label>
+          <input type="text" required placeholder="ФИО полностью">
         </div>
         <div class="form-group">
-          <label for="user-school">Школа / Населённый пункт:</label>
-          <input type="text" id="user-school" required placeholder="Школа №15">
+          <label>Школа</label>
+          <input type="text" required placeholder="№ школы">
         </div>
         <div class="form-group">
-          <label for="user-message">Ваш вопрос:</label>
-          <textarea id="user-message" rows="4" required placeholder="Опишите проблему..."></textarea>
+          <label>Вопрос</label>
+          <textarea rows="4" required placeholder="Опишите вопрос..."></textarea>
         </div>
         <div class="modal-actions">
           <button type="submit" class="btn-primary">Отправить</button>
