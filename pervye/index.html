@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Движение Первых — База знаний</title>
+  <title>Движение Первых — Педагогический навигатор</title>
   <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
@@ -17,71 +17,106 @@
   </header>
 
   <main class="container">
-    <a href="../index.html" class="btn-link">← На главную</a>
+    <a href="../index.html" class="back-link">← На главную</a>
     <h1 class="main-title">⭐ Движение Первых</h1>
-    <p class="subtitle">Инструкции по созданию первичных отделений и проектам.</p>
+    <p class="subtitle">Инструкции по созданию первичных отделений и подаче заявок на проекты.</p>
 
     <!-- Поиск -->
     <div class="search-box">
-      <input type="text" id="search-input" placeholder="🔍 Введите ключевое слово (первичное отделение, ID, заявка)...">
+      <input type="text" id="search-input" placeholder="🔍 Введите запрос для поиска по инструкциям и FAQ...">
     </div>
 
-    <h2 style="margin-bottom: 1rem;">📖 Пошаговые инструкции</h2>
+    <section class="section-block">
+      <h2>Пошаговые инструкции</h2>
 
-    <div class="accordion-item">
-      <button class="accordion-header">
-        <span>Как открыть Первичное отделение?</span>
-        <span class="accordion-icon">＋</span>
-      </button>
-      <div class="accordion-content">
-        <div class="accordion-body">
-          <ol>
-            <li>Соберите инициативную группу (3+ человек).</li>
-            <li>Оформите протокол заседания.</li>
-            <li>Подайте электронное заявление на <code>будьвдвижении.рф</code>.</li>
-          </ol>
+      <div class="accordion-item">
+        <button class="accordion-header">
+          <span>Как открыть Первичное отделение в школе?</span>
+          <span class="icon">＋</span>
+        </button>
+        <div class="accordion-content">
+          <div class="accordion-body">
+            <ol>
+              <li>Соберите инициативную группу (минимум 3 человека: ученики и педагог-наставник).</li>
+              <li>Проведите заседание группы и составьте Протокол создания Первичного отделения.</li>
+              <li>Подайте электронную заявку через личный кабинет на <code>будьвдвижении.рф</code> и прикрепите Протокол.</li>
+            </ol>
+          </div>
         </div>
       </div>
-    </div>
 
-    <h2 style="margin: 2rem 0 1rem;">❓ Частые вопросы (FAQ)</h2>
-
-    <div class="accordion-item">
-      <button class="accordion-header">
-        <span>Где найти ID участника?</span>
-        <span class="accordion-icon">＋</span>
-      </button>
-      <div class="accordion-content">
-        <div class="accordion-body">
-          <p>Уникальный ID находится в личном кабинете участника сразу под именем и фамилией.</p>
+      <div class="accordion-item">
+        <button class="accordion-header">
+          <span>Как подать коллективную заявку на проект?</span>
+          <span class="icon">＋</span>
+        </button>
+        <div class="accordion-content">
+          <div class="accordion-body">
+            <ol>
+              <li>Наставник во вкладке «Проекты» выбирает нужное мероприятие.</li>
+              <li>Нажимает «Подать заявку» и выбирает формат «Командное участие».</li>
+              <li>Вводит ID всех участников команды и прикрепляет выполненное задание.</li>
+            </ol>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div style="text-align: center; margin-top: 3rem;">
-      <button class="btn-primary js-open-modal">📝 Оформить заявку / Задать вопрос</button>
+    <section class="section-block">
+      <h2>Часто задаваемые вопросы (FAQ)</h2>
+
+      <div class="accordion-item">
+        <button class="accordion-header">
+          <span>Где найти ID участника?</span>
+          <span class="icon">＋</span>
+        </button>
+        <div class="accordion-content">
+          <div class="accordion-body">
+            <p>Уникальный ID каждого пользователя расположен в его личном кабинете на сайте <code>будьвдвижении.рф</code> прямо под именем в профиле.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header">
+          <span>С какого возраста доступна регистрация?</span>
+          <span class="icon">＋</span>
+        </button>
+        <div class="accordion-content">
+          <div class="accordion-body">
+            <p>Принимать участие в Движении можно с 6 лет. До 14 лет согласие подтверждают родители, с 14 лет регистрация проходит самостоятельно через Госуслуги.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="feedback-section">
+      <button class="btn-question js-open-modal">
+        <span>📝</span> Задать вопрос / Подать заявку
+      </button>
     </div>
   </main>
 
+  <!-- Модальное окно -->
   <div id="request-modal" class="modal">
     <div class="modal-content">
-      <h2 style="margin-top:0;">Заявка (Движение Первых)</h2>
+      <h2>Задать вопрос по Движению Первых</h2>
       <form id="request-form">
         <div class="form-group">
-          <label>ФИО</label>
-          <input type="text" required placeholder="ФИО полностью">
+          <label>ФИО:</label>
+          <input type="text" required placeholder="Введите ваше ФИО">
         </div>
         <div class="form-group">
-          <label>Первичное отделение / Школа</label>
-          <input type="text" required placeholder="Наименование">
+          <label>Первичное отделение / Школа:</label>
+          <input type="text" required placeholder="Укажите учреждение">
         </div>
         <div class="form-group">
-          <label>Вопрос</label>
+          <label>Ваш вопрос:</label>
           <textarea rows="4" required placeholder="Опишите вопрос..."></textarea>
         </div>
         <div class="modal-actions">
-          <button type="submit" class="btn-primary">Отправить</button>
-          <button type="button" class="btn-secondary" id="close-modal-btn">Отмена</button>
+          <button type="submit" class="btn-submit">Отправить</button>
+          <button type="button" class="btn-close js-close-modal">Отмена</button>
         </div>
       </form>
     </div>
