@@ -1,17 +1,112 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Навигатор для педагогов по Движению Первых."><title>Движение Первых — Педагогический навигатор</title>
-<link rel="stylesheet" href="../assets/style.css"><style>:root{--accent:#d92740;--soft:#ffecef;--glow1:#ef4557;--glow2:#3264d0}</style></head>
-<body><header class="topbar"><div class="container nav"><a class="brand" href="../"><span class="brandmark" style="background:linear-gradient(135deg,#d92740,#2e61ce)">★</span><span>Движение Первых</span></a>
-<nav class="navlinks"><a href="../">Главная</a><a href="#instructions">Инструкции</a><a href="#faq">FAQ</a><a href="https://docs.google.com/forms/d/e/1FAIpQLScjpH6-99fADP17gzk8YCZTK8gjjQ48LbidWgB1qYzVU0Q72A/viewform?usp=publish-editor" target="_blank">Задать вопрос</a></nav><button class="menu" aria-label="Меню">☰</button></div></header>
-<main><section class="hero"><div class="container"><span class="eyebrow">Навигатор педагога</span><h1>Движение Первых</h1><p>Отдельный справочный раздел: регистрация, работа с возможностями, материалы и ответы на вопросы.</p>
-<div class="actions"><a class="btn btn-primary" href="#instructions">Смотреть инструкции</a><a class="btn btn-secondary" href="https://docs.google.com/forms/d/e/1FAIpQLScjpH6-99fADP17gzk8YCZTK8gjjQ48LbidWgB1qYzVU0Q72A/viewform?usp=publish-editor" target="_blank">📝 Задать вопрос</a></div></div></section>
-<section class="section" id="instructions"><div class="container"><div class="section-head"><div><h2>С чего начать</h2><p>Выберите нужную тему.</p></div></div><input class="searchbox" data-search placeholder="Поиск по инструкциям…">
-<div class="grid">
-<article class="card" data-card><div class="num">01</div><h3>Регистрация взрослого</h3><p>Пошаговая навигация по началу работы взрослого пользователя.</p></article><article class="card" data-card><div class="num">02</div><h3>Отделение</h3><p>Основные понятия и действия, связанные с первичным отделением.</p></article><article class="card" data-card><div class="num">03</div><h3>Участники</h3><p>Полезные подсказки по работе с участниками и заявками.</p></article><article class="card" data-card><div class="num">04</div><h3>Мероприятия</h3><p>Как ориентироваться в возможностях и информации о мероприятиях.</p></article><article class="card" data-card><div class="num">05</div><h3>Типичные проблемы</h3><p>Что проверить, если нужная функция не находится или не работает.</p></article><article class="card" data-card><div class="num">06</div><h3>Полезные ссылки</h3><p>Официальные ресурсы и страницы, которые стоит сохранить.</p></article></div></div></section>
-<section class="section" id="faq"><div class="container"><div class="section-head"><div><h2>Частые вопросы</h2><p>Коротко и по делу.</p></div></div><div class="faq">
-<details><summary>Не понимаю, с чего начать.</summary><p>Начните с инструкции «Регистрация взрослого», затем переходите к нужной функции.</p></details>
-<details><summary>Не нашёл нужную функцию.</summary><p>Проверьте поиск по инструкциям. Если ответа нет, отправьте вопрос через форму.</p></details>
-<details><summary>Можно задать свой вопрос?</summary><p>Да. Нажмите «Задать вопрос», укажите ФИО, раздел и подробно опишите проблему.</p></details>
-</div></div></section></main>
-<footer class="footer"><div class="container footerrow"><span>Педагогический навигатор · Движение Первых</span><a href="https://docs.google.com/forms/d/e/1FAIpQLScjpH6-99fADP17gzk8YCZTK8gjjQ48LbidWgB1qYzVU0Q72A/viewform?usp=publish-editor" target="_blank">Подать заявку</a></div></footer>
-<script src="../assets/app.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Движение Первых — Инструкции и FAQ</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <a href="../index.html" class="logo"><strong>Педагогический навигатор</strong></a>
+    <nav class="nav-links">
+      <a href="../orlyata/index.html">Орлята России</a>
+      <a href="../pervye/index.html" class="active">Движение Первых</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← На главную</a>
+    <h1 class="main-title">⭐ Движение Первых</h1>
+    <p class="subtitle">Инструкции по первичному отделению, проектам и подаче заявок на платформе будьвдвижении.рф.</p>
+
+    <!-- Поиск -->
+    <div class="search-box">
+      <input type="text" id="search-input" placeholder="🔍 Введите ключевое слово (например: первичное отделение, заявка, проект)...">
+    </div>
+
+    <!-- Инструкции -->
+    <section class="section-block">
+      <h2>📖 Пошаговые инструкции</h2>
+
+      <details class="accordion-item">
+        <summary><span class="acc-title">Как открыть Первичное отделение «Движения Первых» в школе</span></summary>
+        <div class="acc-body">
+          <ol>
+            <li>Сформируйте инициативную группу (не менее 3 человек: учащиеся и педагог-наставник).</li>
+            <li>Проведите заседание инициативной группы и составьте Протокол.</li>
+            <li>Подайте электронное заявление через личный кабинет на сайте <code>будьвдвижении.рф</code>.</li>
+            <li>Дождитесь утверждения заявки региональным отделением и получи штандарт Первичного отделения.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-title">Как подать коллективную заявку на всероссийский проект</span></summary>
+        <div class="acc-body">
+          <ol>
+            <li>Наставник авторизуется на портале и переходит в карточку нужного проекта.</li>
+            <li>Выбирает тип участия: «Команда» или «Коллективная заявка».</li>
+            <li>Указывает ID всех участников команды (обучающиеся должны быть зарегистрированы на портале).</li>
+            <li>Загружает конкурсное задание и отправляет на модерацию.</li>
+          </ol>
+        </div>
+      </details>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-block">
+      <h2>❓ Частые вопросы (FAQ)</h2>
+
+      <details class="accordion-item">
+        <summary><span class="acc-title">С какого возраста дети могут вступать в Движение Первых?</span></summary>
+        <div class="acc-body">
+          <p>Вступить в Движение могут обучающиеся с 6 лет. До 14 лет согласие подписывают родители, с 14 лет подросток регистрируется самостоятельно через Госуслуги.</p>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-title">Зачем нужен ID участника и где его найти?</span></summary>
+        <div class="acc-body">
+          <p>ID — это уникальный номер участника в системе. Найти его можно в личном кабинете на сайте <code>будьвдвижении.рф</code> в профиле под именем и фамилией.</p>
+        </div>
+      </details>
+    </section>
+
+    <!-- Кнопка заявки -->
+    <div class="feedback-section">
+      <button id="open-modal-btn-main" class="btn-primary">
+        <span>📝</span> Не нашли ответ? Подать заявку / Задать вопрос
+      </button>
+    </div>
+  </main>
+
+  <!-- Модальное окно -->
+  <div id="request-modal" class="modal">
+    <div class="modal-content">
+      <h2>Отправить заявку по «Движению Первых»</h2>
+      <form id="request-form">
+        <div class="form-group">
+          <label for="user-name">Ваше ФИО:</label>
+          <input type="text" id="user-name" required placeholder="Петров Игорь Васильевич">
+        </div>
+        <div class="form-group">
+          <label for="user-school">Школа / Первичное отделение:</label>
+          <input type="text" id="user-school" required placeholder="Лицей №2">
+        </div>
+        <div class="form-group">
+          <label for="user-message">Ваш вопрос или тема заявки:</label>
+          <textarea id="user-message" rows="4" required placeholder="Опишите вопрос..."></textarea>
+        </div>
+        <div class="modal-actions">
+          <button type="submit" class="btn-primary">Отправить</button>
+          <button type="button" class="btn-secondary" id="close-modal-btn">Отмена</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="../assets/app.js"></script>
+</body>
+</html>
