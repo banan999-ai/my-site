@@ -4,101 +4,177 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Орлята России — База знаний</title>
-  <link rel="stylesheet" href="../assets/style.css">
+  <style>
+    /* Стиль и анимации */
+    :root {
+      --primary: #3b82f6;
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --border: rgba(255, 255, 255, 0.1);
+      --text: #f8fafc;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 14px;
+      background: #0f172a;
+      border: 1px solid var(--primary);
+      border-radius: 10px;
+      color: #fff;
+      font-size: 16px;
+      box-sizing: border-box;
+      margin-bottom: 25px;
+    }
+
+    /* Карточка аккордеона */
+    .acc-item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 12px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .acc-header {
+      width: 100%;
+      padding: 18px 20px;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 17px;
+      font-weight: 600;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .acc-icon {
+      font-size: 20px;
+      transition: transform 0.3s ease;
+      color: var(--primary);
+    }
+
+    .acc-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    /* Активное состояние */
+    .acc-item.active .acc-content {
+      max-height: 500px;
+      transition: max-height 0.5s ease-in-out;
+    }
+
+    .acc-item.active .acc-icon {
+      transform: rotate(45deg);
+    }
+
+    .acc-body {
+      padding: 20px;
+      color: #94a3b8;
+      line-height: 1.6;
+    }
+
+    .btn {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
 
-  <header class="header">
-    <a href="../index.html" class="logo">Педагогический навигатор</a>
-    <nav class="nav-links">
-      <a href="../orlyata/index.html" class="active">Орлята России</a>
-      <a href="../pervye/index.html">Движение Первых</a>
-    </nav>
-  </header>
-
-  <main class="container">
-    <a href="../index.html" class="btn-link">← На главную</a>
-    <h1 class="main-title">🦅 Орлята России</h1>
-    <p class="subtitle">База инструкций и ответов на вопросы для педагогов.</p>
+  <div class="container">
+    <a href="../index.html" style="color: var(--primary); text-decoration: none;">← На главную</a>
+    <h1>🦅 Орлята России</h1>
 
     <!-- Поиск -->
-    <div class="search-box">
-      <input type="text" id="search-input" placeholder="🔍 Введите ключевое слово (например: регистрация, треки, отчёт)...">
-    </div>
+    <input type="text" id="search" class="search-input" placeholder="🔍 Поиск по инструкциям и FAQ...">
 
-    <h2 style="margin-bottom: 1rem;">📖 Пошаговые инструкции</h2>
-
-    <div class="accordion-item">
-      <button class="accordion-header">
-        <span>Как зарегистрировать класс на портале?</span>
-        <span class="accordion-icon">＋</span>
-      </button>
-      <div class="accordion-content">
-        <div class="accordion-body">
-          <ol>
-            <li>Зайдите на сайт <code>орлятароссии.рф</code> и войдите в ЛК педагога.</li>
-            <li>Откройте «Мои классы» → «Добавить класс».</li>
-            <li>Укажите параллель и букву, прикрепите согласия родителей.</li>
-          </ol>
+    <!-- Список инструкций -->
+    <div id="instructions-list">
+      
+      <div class="acc-item">
+        <button class="acc-header">
+          <span>Как зарегистрировать класс на портале?</span>
+          <span class="acc-icon">＋</span>
+        </button>
+        <div class="acc-content">
+          <div class="acc-body">
+            1. Зайдите на сайт <b>орлятароссии.рф</b>.<br>
+            2. Перейдите в раздел «Мои классы» → «Добавить класс».<br>
+            3. Заполните данные и загрузите согласия родителей.
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="accordion-item">
-      <button class="accordion-header">
-        <span>Как проходить треки и сдавать отчёты?</span>
-        <span class="accordion-icon">＋</span>
-      </button>
-      <div class="accordion-content">
-        <div class="accordion-body">
-          <p>Проведите 8 занятий по методичке трека, сделайте 3-5 фотографий и загрузите отчёт в ЛК до 25 числа месяца.</p>
+      <div class="acc-item">
+        <button class="acc-header">
+          <span>Как проходить треки и сдавать отчёты?</span>
+          <span class="acc-icon">＋</span>
+        </button>
+        <div class="acc-content">
+          <div class="acc-body">
+            Проведите 8 занятий по методичке трека, сделайте 3–5 фотографий и загрузите отчёт в ЛК до 25 числа месяца.
+          </div>
         </div>
       </div>
-    </div>
 
-    <h2 style="margin: 2rem 0 1rem;">❓ Частые вопросы (FAQ)</h2>
-
-    <div class="accordion-item">
-      <button class="accordion-header">
-        <span>Что делать, если родитель отказался от обработки данных?</span>
-        <span class="accordion-icon">＋</span>
-      </button>
-      <div class="accordion-content">
-        <div class="accordion-body">
-          <p>Ребенок участвует во всех школьных занятиях, но его профиль не заносится в электронную систему портала.</p>
+      <div class="acc-item">
+        <button class="acc-header">
+          <span>FAQ: Что делать при отказе родителя от ОПД?</span>
+          <span class="acc-icon">＋</span>
+        </button>
+        <div class="acc-content">
+          <div class="acc-body">
+            Ребёнок участвует во всех школьных мероприятиях, но его данные не заносятся в электронную систему портала.
+          </div>
         </div>
       </div>
-    </div>
 
-    <div style="text-align: center; margin-top: 3rem;">
-      <button class="btn-primary js-open-modal">📝 Оформить заявку / Задать вопрос</button>
-    </div>
-  </main>
-
-  <div id="request-modal" class="modal">
-    <div class="modal-content">
-      <h2 style="margin-top:0;">Заявка (Орлята России)</h2>
-      <form id="request-form">
-        <div class="form-group">
-          <label>ФИО</label>
-          <input type="text" required placeholder="ФИО полностью">
-        </div>
-        <div class="form-group">
-          <label>Школа</label>
-          <input type="text" required placeholder="№ школы">
-        </div>
-        <div class="form-group">
-          <label>Вопрос</label>
-          <textarea rows="4" required placeholder="Опишите вопрос..."></textarea>
-        </div>
-        <div class="modal-actions">
-          <button type="submit" class="btn-primary">Отправить</button>
-          <button type="button" class="btn-secondary" id="close-modal-btn">Отмена</button>
-        </div>
-      </form>
     </div>
   </div>
 
-  <script src="../assets/app.js"></script>
+  <script>
+    // 1. Клик по аккордеону (раскрытие с анимацией)
+    document.querySelectorAll('.acc-header').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.parentElement;
+        item.classList.toggle('active');
+      });
+    });
+
+    // 2. Живой поиск
+    document.getElementById('search').addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase();
+      document.querySelectorAll('.acc-item').forEach(item => {
+        const text = item.textContent.toLowerCase();
+        item.style.display = text.includes(query) ? 'block' : 'none';
+      });
+    });
+  </script>
 </body>
 </html>
